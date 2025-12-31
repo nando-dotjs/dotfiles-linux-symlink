@@ -1,0 +1,63 @@
+Super + p	Launch dmenu
+Super + Return	Launch terminal (wezterm)
+Super + Shift + Return	Toggle terminal scratchpad
+Super + Shift + a	Toggle audio mixer (pulsemixer)
+Super + r	Toggle ranger file manager
+Super + Control + b	Toggle status bar
+Super + Right	Focus next window in stack
+Super + Left	Focus previous window in stack
+Super + Control + Left	Decrease master area width
+Super + Control + Right	Increase master area width
+Super + Shift + Right	Move window down in stack
+Super + Shift + Left	Move window up in stack
+Control + Shift + Left	View previous tag
+Control + Shift + Right	View next tag
+Alt + Control + Left	Move window to previous tag
+Alt + Control + Right	Move window to next tag
+Super + Tab	Toggle between current and previous tag
+Super + q	Kill focused window
+Super + Shift + Space	Toggle floating mode
+Super + 0	View all tags
+Super + Shift + 0	Tag window with all tags
+Super + ,	Focus previous monitor
+Super + .	Focus next monitor
+Super + Alt + Shift + ,	Move window to previous monitor
+Super + Alt + Shift + .	Move window to next monitor
+Super + Alt + u	Increase all gaps
+Super + Alt + Shift + u	Decrease all gaps
+Super + Alt + i	Increase inner gaps
+Super + Alt + Shift + i	Decrease inner gaps
+Super + Alt + o	Increase outer gaps
+Super + Alt + Shift + o	Decrease outer gaps
+Super + Alt + 6	Increase horizontal inner gaps
+Super + Alt + Shift + 6	Decrease horizontal inner gaps
+Super + Alt + 7	Increase vertical inner gaps
+Super + Alt + Shift + 7	Decrease vertical inner gaps
+Super + Alt + 8	Increase horizontal outer gaps
+Super + Alt + Shift + 8	Decrease horizontal outer gaps
+Super + Alt + 9	Increase vertical outer gaps
+Super + Alt + Shift + 9	Decrease vertical outer gaps
+Super + Alt + 0	Toggle gaps
+Super + Alt + Shift + 0	Reset gaps to default
+Shift + Control + 1	Set dwindle layout
+Shift + Control + 2	Set tile layout
+Shift + Control + 3	Set column layout
+Shift + Control + 4	Set centered master layout
+Shift + Control + 5	Set floating layout
+Shift + Control + 6	Set bstack layout
+Shift + Control + 7	Set n-row grid layout
+Shift + Control + 8	Set deck layout
+Shift + Control + 9	Set gapless grid layout
+Shift + Control + 0	Set spiral layout
+Shift + Control + -	Set monocle layout
+Shift + Control + =	Set grid layout
+Super + 1-9,0,-,=	Switch to tag
+Super + Control + 1-9,0,-,=	Toggle tag view
+Super + Shift + 1-9,0,-,=	Move window to tag
+Super + Control + Shift + 1-9,0,-,=	Tag window with additional tag
+Super + Alt + Shift + Tab	Increase number of windows in master area
+Super + Alt + Tab	Decrease number of windows in master area
+Super + y	Toggle sticky window
+Super + Shift + f	Toggle fullscreen
+Super + Shift + q	Quit dwm
+Super + Shift + r	Restart dwm
