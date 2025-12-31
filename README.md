@@ -187,3 +187,43 @@ Screenshots are saved to `~/Screenshots/`.
 |--------|--------|
 | `Super + X` | Power menu (shutdown / reboot) |
 ---
+
+## 🛠️ Editing dwm Configuration (Notes)
+
+This is my personal workflow for editing and applying changes to `dwm` configuration.
+Saved here for quick reference.
+
+### 🔁 Rebuild & Apply Changes
+
+1. Edit `config.def.h`
+2. Delete the generated `config.h`
+3. Navigate to the dwm directory:
+   ```bash
+   cd ~/.config/suckless/dwm
+4. sudo make clean install
+5. Super + Shift + R
+
+### 🖥️ Monitor Index Reference
+
+| Value | Meaning |
+|------:|---------|
+| `monitor 0` | Monitor 1 (primary) |
+| `monitor 1` | Monitor 2 |
+| `monitor -1` | Any monitor |
+
+---
+
+### 🏷️ Tag Bitmask Reference
+
+| Visible Tag | Internal Value |
+|------------|----------------|
+| Tag 1 | `1 << 0` |
+| Tag 2 | `1 << 1` |
+| Tag 3 | `1 << 2` |
+| Tag 4 | `1 << 3` |
+| Tag 5 | `1 << 4` |
+| Tag 6 | `1 << 5` |
+| Tag 7 | `1 << 6` |
+| Tag 8 | `1 << 7` |
+| Tag 9 | `1 << 8` |
+| Tag 0 | Opens on the currently focused monitor |
