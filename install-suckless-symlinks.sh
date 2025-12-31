@@ -1,59 +1,63 @@
 #!/usr/bin/env bash
-
 set -e
 
-REPO="$HOME/repos/suckless"
-CONFIG="$HOME/.config/suckless"
-BACKUP="$HOME/.config/suckless-backup-$(date +%Y%m%d-%H%M)"
+REPO_DIR="$HOME/repos/suckless"
+CONFIG_DIR="$HOME/.config/suckless"
+BACKUP_DIR="$HOME/.config/suckless.bak.$(date +%Y%m%d-%H%M%S)"
 
-COMPONENTS=(
-  rofi
-  scripts
-  wallpaper
-  dunst
-  picom
+ITEMS=(
   dwm
   st
   slstatus
+  dunst
+  picom
+  rofi
+  scripts
   sxhkd
   tabbed
+  wallpaper
 )
 
-echo "== Installing suckless symlinks =="
-echo "Repo:   $REPO"
-echo "Target: $CONFIG"
-echo "Backup: $BACKUP"
+echo "== Suckless symlink installer =="
+echo "Repo:   $REPO_DIR"
+echo "Config: $CONFIG_DIR"
 echo
 
-mkdir -p "$BACKUP"
+mkdir -p "$BACKUP_DIR"
 
-for item in "${COMPONENTS[@]}"; do
-  SRC="$REPO/$item"
-  DST="$CONFIG/$item"
+for item in "${ITEMS[@]}"; do
+  SRC="$REPO_DIR/$item"
+  DEST="$CONFIG_DIR/$item"
 
-  echo "▶ Processing: $item"
-
-  if [[ ! -d "$SRC" ]]; then
-    echo "  ❌ Source not found: $SRC — skipping"
+  # Repo must contain the item
+  if [[ ! -e "$SRC" ]]; then
+    echo "⚠️  $item not found in repo, skipping"
     continue
   fi
 
-  # If already correct symlink, skip
-  if [[ -L "$DST" && "$(readlink -f "$DST")" == "$SRC" ]]; then
-    echo "  ✅ Symlink already correct"
+  # Already a symlink → leave it alone
+  if [[ -L "$DEST" ]]; then
+    echo "✔ $item is already a symlink, leaving it"
     continue
   fi
 
-  # Backup existing
-  if [[ -e "$DST" || -L "$DST" ]]; then
-    echo "  📦 Backing up existing $item"
-    mv "$DST" "$BACKUP/"
+  # Real directory → convert to symlink
+  if [[ -d "$DEST" ]]; then
+    echo "📦 Backing up real directory: $item"
+    mv "$DEST" "$BACKUP_DIR/"
+    echo "🔗 Linking $item"
+    ln -s "$SRC" "$DEST"
+    continue
   fi
 
-  echo "  🔗 Creating symlink"
-  ln -s "$SRC" "$DST"
-  echo
+  # Doesn't exist → just create the symlink
+  if [[ ! -e "$DEST" ]]; then
+    echo "➕ Creating symlink for missing $item"
+    ln -s "$SRC" "$DEST"
+  fi
 done
 
+echo
 echo "✅ Done!"
-echo "You can now reload dwm / restart X"
+echo "Backup created at:"
+echo "  $BACKUP_DIR"
