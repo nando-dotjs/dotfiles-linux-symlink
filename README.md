@@ -227,3 +227,12 @@ Saved here for quick reference.
 | Tag 8 | `1 << 7` |
 | Tag 9 | `1 << 8` |
 | Tag 0 | Opens on the currently focused monitor |
+
+---
+
+## 💻 Setup on a New PC
+
+1. git clone https://github.com/nando-dotjs/suckless.git ~/repos/suckless
+2. chmod +x install-suckless-symlinks.sh
+3. ./install-suckless-symlinks.sh
+
