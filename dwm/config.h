@@ -62,6 +62,7 @@ static const Rule rules[] = {
     { "discord",            NULL,       NULL,       1 << 1,       0,           0,            0,        0  },
     { "steam",              NULL,       NULL,       1 << 2,       0,           0,            0,        0  },
     { "Geany",              NULL,       NULL,       1 << 3,       0,           0,            0,        0  },
+    { "org.wezfurlong.wezterm",              NULL,       NULL,       1 << 3,       0,           0,            0,        0  },
     { "obs",                NULL,       NULL,       1 << 8,       0,           0,            0,        0  },
     { "steam_app_1808500",  NULL,       NULL,       1 << 9,       0,           0,            0,        0  }  /* ARC Raiders */
     
