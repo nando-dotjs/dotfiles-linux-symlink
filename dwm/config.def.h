@@ -51,20 +51,17 @@ static const Rule rules[] = {
 	{ "Transmission-gtk",   NULL,       NULL,       0,            1,           1,           -1,        0  },
 	{ "Lxappearance",       NULL,       NULL,       0,            1,           1,           -1,        0  },
 	{ "Pavucontrol",        NULL,       NULL,       0,            1,           1,           -1,        0  },
-	{ "Thunar",             NULL,       NULL,       0,            0,           1,           -1,        0  },
-    { "Rofi",               NULL,       NULL,       0,            1,           1,           -1,        0  },
+    	{ "Rofi",               NULL,       NULL,       0,            1,           1,           -1,        0  },
 	{ "st-256color",        NULL,   "scratchpad",   0,            1,           1,           -1,       's' },
 	{ "st-256color",        NULL,   "pulsemixer",   0,            1,           1,           -1,       'a' },
-    { "st-256color",        NULL,     "Yazi: ~/",     0,            1,           1,           -1,       'r' },
-    { "Microsoft-edge",     NULL,       NULL,       1 << 0,       0,           0,            1,        0  }, /* Teams PWA, Edge */
-    { "TeamViewer",         NULL,       NULL,       1 << 1,       0,           0,            1,        0  }, 
-    { "firefox-esr",        NULL,       NULL,       1 << 0,       0,           0,            0,        0  },
-    { "discord",            NULL,       NULL,       1 << 1,       0,           0,            0,        0  },
-    { "steam",              NULL,       NULL,       1 << 2,       0,           0,            0,        0  },
-    { "Geany",              NULL,       NULL,       1 << 3,       0,           0,            0,        0  },
-    { "org.wezfurlong.wezterm",              NULL,       NULL,       1 << 3,       0,           0,            0,        0  },
-    { "obs",                NULL,       NULL,       1 << 8,       0,           0,            0,        0  },
-    { "steam_app_1808500",  NULL,       NULL,       1 << 9,       0,           0,            0,        0  }  /* ARC Raiders */
+    	{ "st-256color",        NULL,     "Yazi: ~/",   0,            1,           1,           -1,       'r' },
+    	{ "Microsoft-edge",     NULL,       NULL,       1 << 0,       0,           0,            1,        0  }, /* Teams PWA, Edge */
+    	{ "TeamViewer",         NULL,       NULL,       1 << 1,       0,           0,            1,        0  }, 
+    	{ "firefox-esr",        NULL,       NULL,       1 << 0,       0,           0,            0,        0  },
+    	{ "discord",            NULL,       NULL,       1 << 1,       0,           0,            0,        0  },
+    	{ "steam",              NULL,       NULL,       1 << 2,       0,           0,            0,        0  },
+    	{ "Geany",              NULL,       NULL,       1 << 3,       0,           0,            0,        0  },
+    	{ "obs",                NULL,       NULL,       1 << 8,       0,           0,            0,        0  },
     
 };
 
